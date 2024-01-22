@@ -1,4 +1,4 @@
-﻿@model List<Technician>
+﻿@model List<Incident>
 @{
     ViewBag.Title = "Incidents";
 }
@@ -21,22 +21,23 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var technician in Model)
+                @foreach (var incident in Model)
                 {
                     <tr>
-                        <td>@technician.Name</td>
-                        <td>@technician.Email</td>
-                        <td>@technician.Phone</td>
+                        <td>@incident.Title</td>
+                        <td>@incident.Product</td>
+                        <td>@incident.Customer</td>
+                        <td>@incident.DateOpened</td>
                         <td>
-                            <a asp-controller="Technician" asp-action="Edit" class="btn btn-secondary"
-                               asp-route-id="@technician.TechnicianID">Edit</a>
-                            <a asp-controller="Technician" asp-action="Delete" class="btn btn-secondary"
-                               asp-route-id="@technician.TechnicianID">Delete</a>
+                            <a asp-controller="Incident" asp-action="Edit" class="btn btn-secondary"
+                               asp-route-id="@incident.IncidentID">Edit</a>
+                            <a asp-controller="Incident" asp-action="Delete" class="btn btn-secondary"
+                               asp-route-id="@incident.IncidentID">Delete</a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
-    <a asp-controller="Technician" class="btn btn-primary" asp-action="Add">Add Technician</a>
+    <a asp-controller="Incident" class="btn btn-primary" asp-action="Add">Add Incident</a>
 </div>
