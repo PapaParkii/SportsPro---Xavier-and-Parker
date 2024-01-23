@@ -25,7 +25,6 @@
     <Folder Include="Views\Home\Customers\" />
     <Folder Include="Views\Home\Incidents\" />
     <Folder Include="Views\Home\Registrations\" />
-    <Folder Include="Views\Home\Technicians\" />
   </ItemGroup>
 
 
