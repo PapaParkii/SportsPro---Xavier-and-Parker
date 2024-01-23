@@ -1,0 +1,14 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Delete Customer";
+}
+
+<h1>Delete Customer</h1>
+
+<p>Are you sure you want to delete customer: @Model.FullName?</p>
+
+<form asp-controller="Customer" asp-action="ConfirmDelete" method="post">
+    <input type="hidden" asp-for="CustomerID" />
+    <input type="submit" value="Confirm Delete" />
+</form>
+

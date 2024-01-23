@@ -1,0 +1,20 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Add/Edit Customer";
+}
+
+<h1>Add/Edit Customer</h1>
+
+<form asp-controller="Customer" asp-action="AddEdit" method="post">
+    <input type="hidden" asp-for="CustomerID" />
+
+    <label asp-for="FirstName">First Name:</label>
+    <input asp-for="FirstName" />
+
+    <!-- Repeat for other properties -->
+
+    <label asp-for="CountryID">Country:</label>
+    <select asp-for="CountryID" asp-items="@(new SelectList(ViewBag.Countries, "CountryID", "Name"))"></select>
+
+    <input type="submit" value="Save" />
+</form>

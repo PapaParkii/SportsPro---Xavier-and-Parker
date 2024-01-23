@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using SportsPro.Properties;
 
 namespace SportsPro.Models
 {

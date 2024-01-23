@@ -46,7 +46,7 @@ namespace SportsPro.Controllers
                 {
                     context.Products.Add(product);
                 }
-                // the product from database have to Added
+                
                 else
                 {
                     context.Products.Update(product);
@@ -64,7 +64,7 @@ namespace SportsPro.Controllers
 
 
 
-        public IActionResult ProductManager()
+        public IActionResult List()
         {
             List<Product> products = context.Products.ToList();
             return View(products);

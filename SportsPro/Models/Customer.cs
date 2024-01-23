@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using SportsPro.Properties;
 
 namespace SportsPro.Models
 {
