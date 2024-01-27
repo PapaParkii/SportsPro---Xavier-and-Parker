@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SportsPro.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
@@ -13,12 +14,12 @@ namespace SportsPro.Controllers
             context = ctx;
         }
 
-        [HttpGet]
-        public IActionResult TechniciansManager()
+        public IActionResult List()
         {
-            var technicians = context.Technicians.OrderBy(m => m.Name);
+            List<Technician> technicians;
+            technicians = context.Technicians.ToList();
             return View(technicians);
-            
+
         }
 
         [HttpGet]
@@ -44,7 +45,7 @@ namespace SportsPro.Controllers
                 else
                     context.Technicians.Update(technician);
                 context.SaveChanges();
-                return RedirectToAction("TechniciansManager", "Technicians");
+                return RedirectToAction("List", technician);
             }
             else
             {
@@ -63,7 +64,7 @@ namespace SportsPro.Controllers
         {
             context.Technicians.Remove(technician);
             context.SaveChanges();
-            return RedirectToAction("TechniciansManager", "Technicians");
+            return RedirectToAction("List", technician);
         }
 
     }
