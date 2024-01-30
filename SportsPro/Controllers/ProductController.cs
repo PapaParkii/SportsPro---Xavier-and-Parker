@@ -15,10 +15,10 @@ namespace SportsPro.Controllers
 
 
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+      //  public IActionResult Index()
+      //  {
+      //      return View();
+      //  }
 
 
         [HttpGet]
@@ -66,7 +66,7 @@ namespace SportsPro.Controllers
 
         public IActionResult List()
         {
-            List<Product> products = context.Products.ToList();
+            var products = context.Products.ToList();
             return View(products);
         }
 
