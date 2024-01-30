@@ -52,7 +52,7 @@ namespace SportsPro.Controllers
                     context.Products.Update(product);
                 }
                 context.SaveChanges();
-                return RedirectToAction("List");
+                return RedirectToAction("Product");
             }
             else
             {
@@ -64,7 +64,7 @@ namespace SportsPro.Controllers
 
 
 
-        public IActionResult List()
+        public ViewResult Product()
         {
             var products = context.Products.ToList();
             return View(products);
