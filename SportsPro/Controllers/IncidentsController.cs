@@ -13,7 +13,7 @@ namespace SportsPro.Controllers
         {
             context = ctx;
         }
-
+        [Route("Incidents")]
         public IActionResult List()
         {
             List<Incident> incidents;

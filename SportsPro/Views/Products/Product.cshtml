@@ -18,11 +18,11 @@
                 <td>@product.YearlyPrice</td>
                 <td>@product.ReleaseDate</td>
                 <td>
-                    <a asp-controller="Product" asp-action="Edit"
+                    <a asp-controller="Products" asp-action="Edit"
                        asp-route-id="@product.ProductID" class="btn btn-primary">Edit</a>
                 </td>
                 <td>
-                    <a asp-controller="Product" asp-action="Delete"
+                    <a asp-controller="Products" asp-action="Delete"
                        asp-route-id="@product.ProductID" class="btn btn-primary">
                         Delete
                     </a>
@@ -31,6 +31,6 @@
         }
     </tbody>
 </table>
-<a asp-controller="Product" asp-action="Add" class="btn btn-primary">Add Product</a>
+<a asp-controller="Products" asp-action="Add" class="btn btn-primary">Add Product</a>
 
 

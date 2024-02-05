@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace SportsPro.Controllers
 {
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         private SportsProContext context;
-        public ProductController(SportsProContext ctx)
+        public ProductsController(SportsProContext ctx)
         {
             context = ctx;
         }
@@ -63,7 +63,7 @@ namespace SportsPro.Controllers
 
 
 
-
+        [Route("Products")]
         public ViewResult Product()
         {
             var products = context.Products.ToList();

@@ -14,6 +14,8 @@ namespace SportsPro.Controllers
             context = ctx;
         }
 
+
+        [Route("Technicians")]
         public IActionResult List()
         {
             List<Technician> technicians;
