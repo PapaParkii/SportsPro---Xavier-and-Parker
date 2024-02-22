@@ -16,10 +16,10 @@ namespace SportsPro.Controllers
 
 
         [Route("Technicians")]
-        public IActionResult List()
+        public ViewResult Technician()
         {
-            List<Technician> technicians;
-            technicians = context.Technicians.ToList();
+           // List<Technician> technicians;
+           var technicians = context.Technicians.ToList();
             return View(technicians);
 
         }

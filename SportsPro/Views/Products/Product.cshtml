@@ -1,5 +1,14 @@
 ﻿@model List<Product>
 <h1>Product Manager</h1>
+
+@if (TempData.Keys.Contains("message"))
+{
+    <h4 class="bg-info text-center text-white p-2">
+        @TempData["message"]
+    </h4>
+}
+
+
 <table class="table table-bordered table-striped">
     <tbody>
         <tr>
