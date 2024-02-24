@@ -14,10 +14,9 @@ namespace SportsPro.Controllers
             context = ctx;
         }
         [Route("Incidents")]
-        public IActionResult List()
+        public ViewResult Incident()
         {
-            List<Incident> incidents;
-            incidents = context.Incidents.ToList();
+            var incidents = context.Incidents.ToList();
             return View(incidents);
 
         }

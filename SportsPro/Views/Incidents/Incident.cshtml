@@ -9,9 +9,9 @@
     </header>
 
 
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
+   
+        <table class="table table-bordered table-striped">
+            <tbody>
                 <tr>
                     <th>Title</th>
                     <th>Product</th>
@@ -19,25 +19,34 @@
                     <th>Date Opened</th>
                     <th></th>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var incident in Model)
+           
+                @foreach (Incident incident in Model)
                 {
                     <tr>
                         <td>@incident.Title</td>
                         <td>@incident.Product</td>
                         <td>@incident.Customer</td>
                         <td>@incident.DateOpened</td>
+
                         <td>
-                            <a asp-controller="Incident" asp-action="Edit" class="btn btn-secondary"
-                               asp-route-id="@incident.IncidentID">Edit</a>
-                            <a asp-controller="Incident" asp-action="Delete" class="btn btn-secondary"
-                               asp-route-id="@incident.IncidentID">Delete</a>
+                            <a asp-controller="Incident" asp-action="Edit" class="btn btn-primary"
+                               asp-route-id="@incident.IncidentID">Edit
+                           </a>
                         </td>
+
+                        <td>
+                            <a asp-controller="Incident" asp-action="Delete" class="btn btn-primary"
+                               asp-route-id="@incident.IncidentID">Delete
+                           </a>
+
+                        </td>
+
+                       
                     </tr>
+                   
                 }
             </tbody>
         </table>
     </div>
-    <a asp-controller="Incident" class="btn btn-primary" asp-action="Add">Add Incident</a>
+    <a asp-controller="Incident" class="btn btn-primary" asp-action="Add">Add Incident</a> 
 </div>

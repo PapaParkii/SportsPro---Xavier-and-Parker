@@ -19,23 +19,32 @@
             <th></th>
 
         </tr>
+
+
         @foreach (Product product in Model)
-        {
+        {   
             <tr>
                 <td>@product.ProductCode</td>
                 <td>@product.Name</td>
                 <td>@product.YearlyPrice</td>
                 <td>@product.ReleaseDate</td>
+
                 <td>
                     <a asp-controller="Products" asp-action="Edit"
-                       asp-route-id="@product.ProductID" class="btn btn-primary">Edit</a>
+                       asp-route-id="@product.ProductID" class="btn btn-primary">
+                       Edit
+                   </a>
+
                 </td>
+
                 <td>
                     <a asp-controller="Products" asp-action="Delete"
                        asp-route-id="@product.ProductID" class="btn btn-primary">
                         Delete
                     </a>
-                </td>
+                 </td>
+
+                
             </tr>
         }
     </tbody>
