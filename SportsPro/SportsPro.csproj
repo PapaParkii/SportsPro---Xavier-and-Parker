@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Incidents\" />
+    <Folder Include="Views\TechniciansIncidents\" />
     <Folder Include="Views\Registrations\" />
   </ItemGroup>
 
